@@ -3,4 +3,18 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
          version="3.1">
+
+    <welcome-file-list>
+        <welcome-file>index.jsp</welcome-file>
+    </welcome-file-list>
+    <servlet>
+        <description></description>
+        <display-name>ParserController</display-name>
+        <servlet-name>ParserController</servlet-name>
+        <servlet-class>com.pavel.bank.controller.ParserController</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ParserController</servlet-name>
+        <url-pattern>/parserController</url-pattern>
+    </servlet-mapping>
 </web-app>

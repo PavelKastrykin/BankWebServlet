@@ -20,5 +20,6 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" scope="PROVIDED" name="Tomcat 7.0.59" level="application_server_libraries" />
+    <orderEntry type="library" name="org.ow2.spec.ee:ow2-jstl-1.2-spec:1.0.13" level="project" />
   </component>
 </module>

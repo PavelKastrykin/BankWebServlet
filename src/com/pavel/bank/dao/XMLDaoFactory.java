@@ -1,26 +1,26 @@
 package com.pavel.bank.dao;
 
-/**
- * Created by Admin on 25.03.15.
- */
+import com.pavel.bank.dao.impl.DomXMLDao;
+import com.pavel.bank.dao.impl.SaxXMLDao;
+import com.pavel.bank.dao.impl.StaxXMLDao;
+
 public class XMLDaoFactory {
     XMLDaoFactory instance = new XMLDaoFactory();
     public XMLDaoFactory getInstance(){
         return instance;
     }
 
-    public XMLDao getDAO(DAOType type){
+    public XMLDao getDAO(DAOType type) throws XMLDaoException{
         XMLDao dao;
         switch (type){
             case SAX:
-                break;
+                return SaxXMLDao.getInstance();
             case STAX:
-                break;
+                return StaxXMLDao.getInstance();
             case DOM:
-                break;
+                return DomXMLDao.getInstance();
             default:
-                break;
-
+                throw new XMLDaoException("DAO not found");
         }
     }
 

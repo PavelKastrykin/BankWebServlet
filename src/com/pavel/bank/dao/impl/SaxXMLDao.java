@@ -11,7 +11,7 @@ import java.util.List;
 public class SaxXMLDao implements XMLDao{
     private static final SaxXMLDao instance = new SaxXMLDao();
 
-    public SaxXMLDao getInstance(){return instance;}
+    public static SaxXMLDao getInstance(){return instance;}
 
     @Override
     public List<Object> parse(String resourseName){

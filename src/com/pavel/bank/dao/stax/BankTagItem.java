@@ -1,4 +1,4 @@
-package com.pavel.bank.parsing.stax;
+package com.pavel.bank.dao.stax;
 
 public enum BankTagItem {
     BANK, ACCOUNT, NAME_OF_BANK, COUNTRY, TYPE_OF_ACCOUNT, DEPOSITOR, ACCOUNT_ID, AMOUNT, ANNUAL_PROFIT, TERM;

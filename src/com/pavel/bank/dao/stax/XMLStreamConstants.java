@@ -1,4 +1,4 @@
-package com.pavel.bank.parsing.stax;
+package com.pavel.bank.dao.stax;
 
 /**
  * Created by Admin on 24.03.15.

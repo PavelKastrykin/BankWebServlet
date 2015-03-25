@@ -1,4 +1,4 @@
-package com.pavel.bank.parsing.stax;
+package com.pavel.bank.dao.stax;
 
 import com.pavel.bank.entity.Account;
 import com.pavel.bank.entity.AccountType;

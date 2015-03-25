@@ -9,11 +9,6 @@ import java.io.IOException;
 
 public class ParserController extends HttpServlet {
 
-    private static final String PARSER_TYPE = "parserType";
-    private static final String SAX_TYPE = "SAX";
-    private static final String STAX_TYPE = "StAX";
-    public static final String ERROR_PAGE = "error.jsp";
-
     public ParserController() {
         super();
     }
@@ -28,7 +23,7 @@ public class ParserController extends HttpServlet {
         else if (parameter.equals(STAX_TYPE)){
 
         } else {
-            page = ERROR_PAGE;
+            page = JSPPageName.ERROR_PAGE;
         }
 
         RequestDispatcher dispatcher = request.getRequestDispatcher(page);

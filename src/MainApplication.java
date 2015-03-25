@@ -1,4 +1,4 @@
-import com.pavel.bank.parsing.sax.SAXBankParser;
+import com.pavel.bank.dao.sax.SAXBankParser;
 import org.xml.sax.SAXException;
 
 import javax.xml.parsers.ParserConfigurationException;

@@ -1,4 +1,4 @@
-package com.pavel.bank.parsing.sax;
+package com.pavel.bank.dao.sax;
 
 import com.pavel.bank.entity.Account;
 import com.pavel.bank.entity.AccountType;
@@ -9,15 +9,15 @@ import org.xml.sax.helpers.DefaultHandler;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Created by Admin on 23.03.15.
- */
 public class SAXBankParser extends DefaultHandler{
+    private static final SAXBankParser instance = new SAXBankParser();
+
     private List<Account> accounts;
     private String currentElement;
     private Account currentAccount;
     private String currentIBAN;
 
+    public static SAXBankParser getInstance(){return instance;}
     public List<Account> getAccounts(){
         return accounts;
     }

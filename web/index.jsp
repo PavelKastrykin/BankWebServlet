@@ -12,7 +12,7 @@
   <body>
 
     <form action="parserController" method="get">
-      <input type="hidden" name="filename" value="index.jsp"/>
+      <input type="hidden" name="filename" value="Bank.xml"/>
       <input type="hidden" name="parserType" id="parserType"/>
       <p><input type="submit" value="SAX" onclick='setControllerType("SAX_COMMAND")'/>
       <p><input type="submit" value="STAX" onclick='setControllerType("STAX_COMMAND")'/>

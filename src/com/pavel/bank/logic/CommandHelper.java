@@ -10,27 +10,27 @@ import java.util.Map;
 
 public class CommandHelper {
     private static final CommandHelper instance = new CommandHelper();
-    private static Map<CommandType, ICommand> COMMANDS = new HashMap<CommandType, ICommand>();
+    private Map<CommandType, ICommand> commands = new HashMap<CommandType, ICommand>();
 
     public static CommandHelper getInstance(){
         return instance;
     }
 
     public CommandHelper(){
-        COMMANDS.put(CommandType.SAX_COMMAND, new DoSaxCommand());
-        COMMANDS.put(CommandType.STAX_COMMAND, new DoStaxCommand());
-        COMMANDS.put(CommandType.DOM_COMMAND, new DoDomCommand());
-        COMMANDS.put(CommandType.NO_SUCH_COMMAND, new DoNoSuchCommand());
+        commands.put(CommandType.SAX_COMMAND, new DoSaxCommand());
+        commands.put(CommandType.STAX_COMMAND, new DoStaxCommand());
+        commands.put(CommandType.DOM_COMMAND, new DoDomCommand());
+        commands.put(CommandType.NO_SUCH_COMMAND, new DoNoSuchCommand());
     }
 
     public ICommand getCommand(String commandName){
         CommandType commandType = CommandType.valueOf(commandName);
         ICommand command;
         if (null != commandType){
-            command = COMMANDS.get(commandType);
+            command = commands.get(commandType);
         }
         else {
-            command = COMMANDS.get(CommandType.NO_SUCH_COMMAND);
+            command = commands.get(CommandType.NO_SUCH_COMMAND);
         }
         return command;
     }

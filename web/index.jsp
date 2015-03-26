@@ -12,10 +12,11 @@
   <body>
 
     <form action="parserController" method="get">
+      <input type="hidden" name="filename" value="index.jsp"/>
       <input type="hidden" name="parserType" id="parserType"/>
-      <p><input type="submit" value="SAX" onclick='setControllerType("SAX")'/>
-      <p><input type="submit" value="StAX" onclick='setControllerType("StAX")'/>
-      <p><input type="submit" value="error" onclick='setControllerType("error")'/>
+      <p><input type="submit" value="SAX" onclick='setControllerType("SAX_COMMAND")'/>
+      <p><input type="submit" value="STAX" onclick='setControllerType("STAX_COMMAND")'/>
+      <p><input type="submit" value="DOM" onclick='setControllerType("DOM_COMMAND")'/>
     </form>
   </body>
 </html>

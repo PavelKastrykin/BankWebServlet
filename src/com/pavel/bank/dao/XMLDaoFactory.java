@@ -5,8 +5,8 @@ import com.pavel.bank.dao.impl.SaxXMLDao;
 import com.pavel.bank.dao.impl.StaxXMLDao;
 
 public class XMLDaoFactory {
-    XMLDaoFactory instance = new XMLDaoFactory();
-    public XMLDaoFactory getInstance(){
+    public static final XMLDaoFactory instance = new XMLDaoFactory();
+    public static XMLDaoFactory getInstance(){
         return instance;
     }
 
@@ -24,7 +24,7 @@ public class XMLDaoFactory {
         }
     }
 
-    private enum DAOType{
+    public enum DAOType{
         SAX, STAX, DOM
     }
 }

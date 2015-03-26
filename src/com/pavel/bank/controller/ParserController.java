@@ -1,5 +1,8 @@
 package com.pavel.bank.controller;
 
+import com.pavel.bank.logic.CommandHelper;
+import com.pavel.bank.logic.ICommand;
+
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -15,16 +18,11 @@ public class ParserController extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        String parameter = request.getParameter(PARSER_TYPE);
+        String commandName = request.getParameter("parserType");
+        ICommand command = CommandHelper.getInstance().getCommand(commandName);
         String page = null;
-        if (parameter.equals(SAX_TYPE)){
+        page = command.execute(request);
 
-        }
-        else if (parameter.equals(STAX_TYPE)){
-
-        } else {
-            page = JSPPageName.ERROR_PAGE;
-        }
 
         RequestDispatcher dispatcher = request.getRequestDispatcher(page);
 

@@ -8,11 +8,11 @@
   <title>Parser result</title>
 </head>
 <body>
-<table>
+<table border="1">
   <tr> <th>IBAN</th> <th>Bank name</th> <th>Country</th> <th>Account type</th> <th>Depositor name</th>
     <th>Account ID</th> <th>Amount</th> <th>Annual profit</th> <th>Term</th> </tr>
   <c:forEach var="account" items="${content}" >
-    <tr> <td>${account.IBAN}</td> <td>${account.bankName}</td> <td>${account.country}</td> <td>${account.typeOfAccount}</td>
+    <tr> <td>${account.IBAN}</td> <td>${account.nameOfBank}</td> <td>${account.country}</td> <td>${account.typeOfAccount}</td>
       <td>${account.depositor}</td> <td>${account.accountID}</td> <td>${account.amount}</td> <td>${account.annualProfit}</td>
       <td>${account.term}</td> </tr>
   </c:forEach>

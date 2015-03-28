@@ -1,6 +1,7 @@
 package com.pavel.bank.dao.impl;
 
 import com.pavel.bank.dao.XMLDao;
+import com.pavel.bank.dao.dom.DOMBankParser;
 import org.xml.sax.SAXException;
 
 import javax.xml.parsers.ParserConfigurationException;
@@ -18,6 +19,6 @@ public class DomXMLDao implements XMLDao {
 
     @Override
     public List<? extends Object> parseXML(String resourceName) throws XMLStreamException, SAXException, ParserConfigurationException, IOException {
-        return null;
+        return DOMBankParser.getAccounts(resourceName);
     }
 }

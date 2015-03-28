@@ -43,7 +43,7 @@ public class SAXBankParser extends DefaultHandler{
             currentAccount.setIBAN(currentIBAN);
         }
         if ("nameOfBank".equals(currentElement)){
-            currentAccount.setBankName(new String(ch, start, length));
+            currentAccount.setNameOfBank(new String(ch, start, length));
         }
         if ("country".equals(currentElement)){
             currentAccount.setCountry(new String(ch, start, length));

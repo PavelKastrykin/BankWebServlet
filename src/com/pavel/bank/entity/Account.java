@@ -5,7 +5,7 @@ package com.pavel.bank.entity;
  */
 public class Account {
     private String IBAN;
-    private String bankName;
+    private String nameOfBank;
     private String country;
     private AccountType typeOfAccount;
     private String depositor;
@@ -17,8 +17,8 @@ public class Account {
     public String getIBAN() {
         return IBAN;
     }
-    public String getBankName() {
-        return bankName;
+    public String getNameOfBank() {
+        return nameOfBank;
     }
     public String getCountry() {
         return country;
@@ -45,8 +45,8 @@ public class Account {
     public void setIBAN(String IBAN) {
         this.IBAN = IBAN;
     }
-    public void setBankName(String bankName) {
-        this.bankName = bankName;
+    public void setNameOfBank(String nameOfBank) {
+        this.nameOfBank = nameOfBank;
     }
     public void setCountry(String country) {
         this.country = country;

@@ -37,7 +37,7 @@ public class StAXBankParser {
                     }
                     switch (elementName){
                         case NAME_OF_BANK:
-                            account.setBankName(text);
+                            account.setNameOfBank(text);
                             break;
                         case COUNTRY:
                             account.setCountry(text);

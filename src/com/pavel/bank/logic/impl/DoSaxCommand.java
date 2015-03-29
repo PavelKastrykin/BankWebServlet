@@ -2,19 +2,16 @@ package com.pavel.bank.logic.impl;
 
 import com.pavel.bank.controller.JSPPageName;
 import com.pavel.bank.dao.XMLDao;
-import com.pavel.bank.dao.XMLDaoException;
 import com.pavel.bank.dao.XMLDaoFactory;
 import com.pavel.bank.logic.ICommand;
-import org.xml.sax.SAXException;
 
 import javax.servlet.http.HttpServletRequest;
-import javax.xml.parsers.ParserConfigurationException;
-import javax.xml.stream.XMLStreamException;
-import java.io.IOException;
 import java.util.List;
+import org.apache.log4j.Logger;
 
 public class DoSaxCommand implements ICommand {
 
+    public static final Logger logger = Logger.getLogger(DoSaxCommand.class);
     @Override
     public String execute(HttpServletRequest request) {
         String page = null;
@@ -26,6 +23,7 @@ public class DoSaxCommand implements ICommand {
             page = JSPPageName.PARSER_PAGE;
         }
         catch (Exception e){
+            logger.info(e.getMessage());
             request.setAttribute("errorMessage", e.getMessage());
             page = JSPPageName.ERROR_PAGE;
         }

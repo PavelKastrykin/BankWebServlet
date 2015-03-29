@@ -12,9 +12,6 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.List;
 
-/**
- * Created by Pachon on 25.03.2015.
- */
 public class StaxXMLDao implements XMLDao {
     private static final StaxXMLDao instance = new StaxXMLDao();
 

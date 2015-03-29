@@ -12,9 +12,6 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Created by Admin on 25.03.15.
- */
 public class DOMBankParser {
     private static final DOMBankParser instance = new DOMBankParser();
 

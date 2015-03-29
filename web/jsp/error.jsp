@@ -8,5 +8,6 @@
 </head>
 <body>
   <h1>E R R O R</h1>
+  ${errorMessage}
 </body>
 </html>

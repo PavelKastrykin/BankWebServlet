@@ -7,11 +7,11 @@ import com.pavel.bank.logic.ICommand;
 
 import javax.servlet.http.HttpServletRequest;
 import java.util.List;
+import org.apache.log4j.Logger;
 
-/**
- * Created by Admin on 26.03.15.
- */
+
 public class DoDomCommand implements ICommand {
+    public static final Logger logger = Logger.getLogger(DoDomCommand.class);
     @Override
     public String execute(HttpServletRequest request) {
         String page = null;
@@ -23,6 +23,7 @@ public class DoDomCommand implements ICommand {
             page = JSPPageName.PARSER_PAGE;
         }
         catch (Exception e){
+            logger.info(e.getMessage());
             request.setAttribute("errorMessage", e.getMessage());
             page = JSPPageName.ERROR_PAGE;
         }

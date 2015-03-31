@@ -1,4 +1,4 @@
-package main.java.com.pavel.bank.entity;
+package com.pavel.bank.entity;
 
 public enum  AccountType {
     DEPOSIT,

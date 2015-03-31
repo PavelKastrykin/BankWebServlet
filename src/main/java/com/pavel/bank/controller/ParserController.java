@@ -1,7 +1,7 @@
-package main.java.com.pavel.bank.controller;
+package com.pavel.bank.controller;
 
-import main.java.com.pavel.bank.logic.CommandHelper;
-import main.java.com.pavel.bank.logic.ICommand;
+import com.pavel.bank.logic.CommandHelper;
+import com.pavel.bank.logic.ICommand;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -21,7 +21,7 @@ public class ParserController extends HttpServlet {
         String commandName = request.getParameter("parserType");
         ICommand command = CommandHelper.getInstance().getCommand(commandName);
         String page = null;
-        page = command.execute(request);
+        page = command.execute(request, getServletContext());
 
 
         RequestDispatcher dispatcher = request.getRequestDispatcher(page);

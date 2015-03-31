@@ -1,9 +1,9 @@
-package com.pavel.bank.logic;
+package main.java.com.pavel.bank.logic;
 
-import com.pavel.bank.logic.impl.DoDomCommand;
-import com.pavel.bank.logic.impl.DoNoSuchCommand;
-import com.pavel.bank.logic.impl.DoSaxCommand;
-import com.pavel.bank.logic.impl.DoStaxCommand;
+import main.java.com.pavel.bank.logic.impl.DoDomCommand;
+import main.java.com.pavel.bank.logic.impl.DoNoSuchCommand;
+import main.java.com.pavel.bank.logic.impl.DoSaxCommand;
+import main.java.com.pavel.bank.logic.impl.DoStaxCommand;
 
 import java.util.HashMap;
 import java.util.Map;

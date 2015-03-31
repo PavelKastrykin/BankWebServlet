@@ -1,4 +1,4 @@
-package com.pavel.bank.logic;
+package main.java.com.pavel.bank.logic;
 
 import javax.servlet.http.HttpServletRequest;
 

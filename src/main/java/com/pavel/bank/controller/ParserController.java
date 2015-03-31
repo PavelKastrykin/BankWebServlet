@@ -1,7 +1,7 @@
-package com.pavel.bank.controller;
+package main.java.com.pavel.bank.controller;
 
-import com.pavel.bank.logic.CommandHelper;
-import com.pavel.bank.logic.ICommand;
+import main.java.com.pavel.bank.logic.CommandHelper;
+import main.java.com.pavel.bank.logic.ICommand;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;

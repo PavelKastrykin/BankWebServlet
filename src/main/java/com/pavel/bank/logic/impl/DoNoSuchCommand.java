@@ -1,7 +1,7 @@
-package com.pavel.bank.logic.impl;
+package main.java.com.pavel.bank.logic.impl;
 
-import com.pavel.bank.controller.JSPPageName;
-import com.pavel.bank.logic.ICommand;
+import main.java.com.pavel.bank.controller.JSPPageName;
+import main.java.com.pavel.bank.logic.ICommand;
 
 import javax.servlet.http.HttpServletRequest;
 import org.apache.log4j.Logger;
